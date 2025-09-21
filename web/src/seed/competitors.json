@@ -1,0 +1,42 @@
+[
+  {
+    "id": "comp-1",
+    "name": "Premium Business Co",
+    "industry": "general",
+    "adContent": "Premium services with high-quality materials. Order now and get free consultation!",
+    "imageUrl": "https://picsum.photos/300/200?random=10",
+    "platform": "Facebook",
+    "location": "Local Area",
+    "estimatedBudget": 500
+  },
+  {
+    "id": "comp-2",
+    "name": "Elite Services Ltd", 
+    "industry": "general",
+    "adContent": "Luxury solutions and custom packages. Book your consultation today!",
+    "imageUrl": "https://picsum.photos/300/200?random=11",
+    "platform": "Instagram",
+    "location": "Local Area", 
+    "estimatedBudget": 800
+  },
+  {
+    "id": "comp-3",
+    "name": "Quick Solutions Inc",
+    "industry": "general",
+    "adContent": "Fast service delivered to your location. Subscribe now for 20% off!",
+    "imageUrl": "https://picsum.photos/300/200?random=12",
+    "platform": "Google Ads",
+    "location": "Local Area",
+    "estimatedBudget": 400
+  },
+  {
+    "id": "comp-4",
+    "name": "Modern Business Hub",
+    "industry": "general", 
+    "adContent": "Traditional values, modern approach. Visit our new location downtown!",
+    "imageUrl": "https://picsum.photos/300/200?random=13",
+    "platform": "Facebook",
+    "location": "Local Area",
+    "estimatedBudget": 350
+  }
+]

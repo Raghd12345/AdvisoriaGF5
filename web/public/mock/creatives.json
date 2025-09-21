@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "data": {
+    "id": "creative-1",
+    "campaignId": "campaign-1",
+    "captions": [
+      "🚀 Ready to transform your business? Our innovative solutions help you reach new heights and connect with customers like never before. Join thousands of successful businesses! #Innovation #Growth #Success",
+      "✨ Behind every great business is a story worth sharing. Let us help you tell yours in a way that captivates, inspires, and converts. Your journey starts here! #BrandStory #Marketing #Transformation",
+      "🎯 Precision meets creativity in everything we do. From strategy to execution, we're your partners in building something extraordinary. Let's create magic together! #Strategy #Creative #Partnership"
+    ],
+    "posterPrompts": [
+      "Modern, clean design featuring your business logo prominently displayed against a gradient background from deep purple to bright blue. Include customer testimonials in elegant typography with subtle geometric patterns and professional lighting that conveys trust and innovation.",
+      "Dynamic composition showing diverse, happy customers engaging with your brand in a contemporary setting. Warm, inviting colors with your brand elements seamlessly integrated. Include call-to-action text in bold, readable fonts with premium visual hierarchy."
+    ],
+    "videoScript": "FADE IN: Modern office space with natural lighting\\n\\nVOICEOVER: 'Every great business starts with a vision...'\\n\\nCUT TO: Montage of diverse team members collaborating\\n\\nVOICEOVER: 'At [Your Business], we turn that vision into reality.'\\n\\nCUT TO: Happy customers using your product/service\\n\\nVOICEOVER: 'Join thousands who've already transformed their success story.'\\n\\nTEXT OVERLAY: 'Your Business Name - Where Vision Meets Reality'\\n\\nCALL TO ACTION: 'Get Started Today'\\n\\nFADE OUT",
+    "createdAt": "2024-01-15T11:00:00Z"
+  }
+}

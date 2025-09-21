@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "clarity": 8.5,
+    "cta": 7.0,
+    "relevance": 9.0,
+    "design": 8.0,
+    "overall": 8.1
+  },
+  "critique": "Your ad has excellent local relevance and clear messaging about quality service. The authentic approach is strong. However, the call-to-action could be more urgent, and consider adding a specific offer like competitors do. The community-focused approach is your key differentiator.",
+  "counterAd": {
+    "caption": "🌟 While others talk premium, we deliver VALUE daily! Community-focused for years, serving locals with dedication. Experience our authentic approach - quality service, fair prices. Free consultation today! #AuthenticService #CommunityFirst",
+    "posterPrompt": "Warm, inviting business interior, team working together, satisfied customers, affordable pricing displayed, 'Community Focused Since Day One' sign, professional lighting, authentic and welcoming atmosphere",
+    "videoScript": "OPEN: Early morning - Team preparing for the day. VOICEOVER: 'While others charge premium prices...' CUT TO: Fair pricing. '...we believe great service should be accessible.' MONTAGE: Happy diverse customers. END: 'Your Business - Real service, real value, real community.'"
+  }
+}

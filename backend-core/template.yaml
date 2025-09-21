@@ -1,0 +1,180 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SME Marketing Assistant - Core API
+
+Globals:
+  Function:
+    Timeout: 30
+    Runtime: python3.11
+    Environment:
+      Variables:
+        BUSINESS_TABLE: !Ref BusinessTable
+        CAMPAIGNS_TABLE: !Ref CampaignsTable
+        ITEMS_TABLE: !Ref ItemsTable
+        COMPARISONS_TABLE: !Ref ComparisonsTable
+        CHAT_SESSIONS_TABLE: !Ref ChatSessionsTable
+        CHAT_MESSAGES_TABLE: !Ref ChatMessagesTable
+        UPLOADS_BUCKET: !Ref UploadsBucket
+
+Resources:
+  # HTTP API
+  CoreApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: prod
+      CorsConfiguration:
+        AllowOrigins:
+          - "*"
+        AllowHeaders:
+          - "*"
+        AllowMethods:
+          - "*"
+
+  # Lambda Function
+  CoreFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: core_handler.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref BusinessTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CampaignsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ItemsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ComparisonsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ChatSessionsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ChatMessagesTable
+        - S3WritePolicy:
+            BucketName: !Ref UploadsBucket
+      Events:
+        ApiEvent:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CoreApi
+            Path: /{proxy+}
+            Method: ANY
+
+  # DynamoDB Tables
+  BusinessTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: businessId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: businessId
+          KeyType: HASH
+
+  CampaignsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: campaignId
+          AttributeType: S
+        - AttributeName: businessId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: campaignId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: BusinessIndex
+          KeySchema:
+            - AttributeName: businessId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+
+  ItemsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+
+  ComparisonsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: comparisonId
+          AttributeType: S
+        - AttributeName: businessId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: comparisonId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: BusinessIndex
+          KeySchema:
+            - AttributeName: businessId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+
+  ChatSessionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: sessionId
+          AttributeType: S
+        - AttributeName: businessId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: sessionId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: BusinessIndex
+          KeySchema:
+            - AttributeName: businessId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+
+  ChatMessagesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: sessionId
+          AttributeType: S
+        - AttributeName: ts
+          AttributeType: N
+      KeySchema:
+        - AttributeName: sessionId
+          KeyType: HASH
+        - AttributeName: ts
+          KeyType: RANGE
+
+  # S3 Bucket
+  UploadsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      CorsConfiguration:
+        CorsRules:
+          - AllowedOrigins:
+              - "*"
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+            AllowedHeaders:
+              - "*"
+
+Outputs:
+  CoreApiUrl:
+    Description: "Core API Gateway endpoint URL"
+    Value: !Sub "https://${CoreApi}.execute-api.${AWS::Region}.amazonaws.com/prod"
+    Export:
+      Name: !Sub "${AWS::StackName}-CoreApiUrl"

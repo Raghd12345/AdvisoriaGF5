@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": {
+    "businessId": "demo-business-123",
+    "name": "Demo Business",
+    "industry": "general",
+    "country": "United States",
+    "city": "New York",
+    "zipCode": "10001",
+    "workingHours": {
+      "start": "09:00",
+      "end": "17:00"
+    },
+    "createdAt": "2024-01-15T08:00:00Z"
+  }
+}

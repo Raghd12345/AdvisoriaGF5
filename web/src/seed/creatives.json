@@ -1,0 +1,24 @@
+{
+  "captions": [
+    "🚀 Discover what makes us different! Our commitment to quality and customer satisfaction drives everything we do. Experience the difference today! #QualityFirst #CustomerFocused",
+    "✨ Special offer this weekend! Don't miss out on our limited-time promotion. Perfect for new and existing customers! 🎯 #WeekendSpecial #LimitedOffer",
+    "👥 Behind the scenes: Meet our dedicated team and see the passion that goes into every project. Years of experience at your service! #BehindTheScenes #TeamWork"
+  ],
+  "posters": [
+    {
+      "id": "poster-1",
+      "imageUrl": "https://picsum.photos/400/600?random=1",
+      "description": "Professional business setup with warm lighting, clean modern interior, quality products displayed"
+    },
+    {
+      "id": "poster-2", 
+      "imageUrl": "https://picsum.photos/400/600?random=2",
+      "description": "Happy customers using service, satisfaction theme, professional environment"
+    }
+  ],
+  "videoScript": {
+    "title": "Your Business - Quality Promise",
+    "duration": "30 seconds",
+    "script": "FADE IN: Early morning - Business owner opens doors. MONTAGE: Team preparing, quality processes, attention to detail. CLOSE-UP: Final product/service delivery. VOICEOVER: 'Every day, we deliver excellence for our community.' CUT TO: Satisfied customers. TEXT OVERLAY: 'Your Business - Quality Since Day One' CALL TO ACTION: 'Experience the difference today!'"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "idea-1",
+      "campaignId": "campaign-1",
+      "title": "🌟 Brand Story Showcase",
+      "description": "Share your business journey and values through compelling visual storytelling that builds authentic connections with your audience.",
+      "platform": "Instagram",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "idea-2",
+      "campaignId": "campaign-1",
+      "title": "💬 Customer Success Stories",
+      "description": "Feature real testimonials and case studies from satisfied customers to build trust and social proof for your brand.",
+      "platform": "Facebook",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:05:00Z"
+    },
+    {
+      "id": "idea-3",
+      "campaignId": "campaign-1",
+      "title": "🎬 Behind-the-Scenes Content",
+      "description": "Show your team, processes, and company culture to humanize your brand and build deeper connections.",
+      "platform": "TikTok",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:10:00Z"
+    },
+    {
+      "id": "idea-4",
+      "campaignId": "campaign-1",
+      "title": "🤝 Local Community Partnership",
+      "description": "Collaborate with other local businesses and community organizations for cross-promotion and increased visibility.",
+      "platform": "Facebook",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:15:00Z"
+    },
+    {
+      "id": "idea-5",
+      "campaignId": "campaign-1",
+      "title": "📚 Educational Content Series",
+      "description": "Share industry tips, tutorials, and expertise to establish thought leadership and provide value to your audience.",
+      "platform": "Instagram",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:20:00Z"
+    },
+    {
+      "id": "idea-6",
+      "campaignId": "campaign-1",
+      "title": "📱 User-Generated Content Campaign",
+      "description": "Encourage customers to share their experiences with your brand through contests and hashtag campaigns.",
+      "platform": "Instagram",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:25:00Z"
+    },
+    {
+      "id": "idea-7",
+      "campaignId": "campaign-1",
+      "title": "🎉 Seasonal Promotions",
+      "description": "Create timely offers and campaigns around holidays, seasons, and special events to drive urgency and sales.",
+      "platform": "Facebook",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "idea-8",
+      "campaignId": "campaign-1",
+      "title": "🔍 Local SEO Campaign",
+      "description": "Target local customers searching for your services online with location-based keywords and Google My Business optimization.",
+      "platform": "Google Ads",
+      "status": "pending",
+      "createdAt": "2024-01-15T10:35:00Z"
+    }
+  ]
+}

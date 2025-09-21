@@ -1,0 +1,258 @@
+openapi: 3.0.0
+info:
+  title: SME Marketing Assistant API
+  version: 1.0.0
+  description: AI-powered marketing assistance for small businesses
+
+servers:
+  - url: https://core-api.execute-api.ap-southeast-1.amazonaws.com/prod
+    description: Core API
+  - url: https://ai-api.execute-api.ap-southeast-1.amazonaws.com/prod
+    description: AI API
+
+paths:
+  /signup:
+    post:
+      summary: Create business profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BusinessInput'
+      responses:
+        '200':
+          description: Business created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /campaigns:
+    post:
+      summary: Create marketing campaign
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignInput'
+      responses:
+        '200':
+          description: Campaign created successfully
+
+  /ideas/generate:
+    post:
+      summary: Generate marketing ideas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                campaignId:
+                  type: string
+                businessId:
+                  type: string
+      responses:
+        '200':
+          description: Ideas generated successfully
+
+  /creatives/generate:
+    post:
+      summary: Generate creative content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                campaignId:
+                  type: string
+                businessId:
+                  type: string
+                approvedIdeas:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Creatives generated successfully
+
+  /plan/generate:
+    post:
+      summary: Generate marketing plan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                campaignId:
+                  type: string
+                businessId:
+                  type: string
+      responses:
+        '200':
+          description: Plan generated successfully
+
+  /competitors/generate:
+    get:
+      summary: Generate competitor ads
+      parameters:
+        - name: businessId
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: industry
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: city
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Competitors generated successfully
+
+  /compare:
+    post:
+      summary: Compare ads and generate counter-strategy
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                businessId:
+                  type: string
+                campaignId:
+                  type: string
+                competitorId:
+                  type: string
+      responses:
+        '200':
+          description: Comparison completed successfully
+
+  /chat/complete:
+    post:
+      summary: Complete chat conversation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                businessId:
+                  type: string
+                sessionId:
+                  type: string
+                messages:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ChatMessage'
+      responses:
+        '200':
+          description: Chat response generated
+
+  /uploads/presign:
+    post:
+      summary: Get presigned upload URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fileName:
+                  type: string
+                fileType:
+                  type: string
+      responses:
+        '200':
+          description: Presigned URL generated
+
+components:
+  schemas:
+    BusinessInput:
+      type: object
+      required:
+        - name
+        - industry
+        - country
+        - city
+        - zipCode
+        - workingHours
+      properties:
+        name:
+          type: string
+        logo:
+          type: string
+        industry:
+          type: string
+        country:
+          type: string
+        city:
+          type: string
+        zipCode:
+          type: string
+        workingHours:
+          type: object
+          properties:
+            start:
+              type: string
+            end:
+              type: string
+
+    CampaignInput:
+      type: object
+      required:
+        - businessId
+        - goal
+        - targetAudience
+        - budget
+      properties:
+        businessId:
+          type: string
+        goal:
+          type: string
+        targetAudience:
+          type: string
+        budget:
+          type: number
+        status:
+          type: string
+          enum: [draft, active, completed]
+
+    ChatMessage:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        ts:
+          type: number
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+
+    ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        error:
+          type: string

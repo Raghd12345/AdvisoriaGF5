@@ -1,0 +1,158 @@
+{
+  "success": true,
+  "data": {
+    "id": "plan-1",
+    "campaignId": "campaign-1",
+    "budgetAllocation": [
+      {
+        "platform": "Facebook",
+        "amount": 400,
+        "percentage": 40
+      },
+      {
+        "platform": "Instagram",
+        "amount": 300,
+        "percentage": 30
+      },
+      {
+        "platform": "Google Ads",
+        "amount": 200,
+        "percentage": 20
+      },
+      {
+        "platform": "TikTok",
+        "amount": 100,
+        "percentage": 10
+      }
+    ],
+    "schedule": [
+      {
+        "date": "2024-01-15",
+        "posts": [
+          {
+            "platform": "Facebook",
+            "content": "🌟 Start your week strong with our latest insights!",
+            "time": "09:00"
+          },
+          {
+            "platform": "Instagram",
+            "content": "✨ Behind the scenes: Creating magic for our clients",
+            "time": "15:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-16",
+        "posts": [
+          {
+            "platform": "TikTok",
+            "content": "🎯 Quick tip Tuesday: Boost your productivity",
+            "time": "12:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-17",
+        "posts": [
+          {
+            "platform": "Facebook",
+            "content": "💡 Wednesday wisdom: Industry best practices",
+            "time": "10:00"
+          },
+          {
+            "platform": "Google Ads",
+            "content": "Professional services near you - Get started today",
+            "time": "14:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-18",
+        "posts": [
+          {
+            "platform": "Instagram",
+            "content": "🚀 Thursday motivation: Success stories from our clients",
+            "time": "11:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-19",
+        "posts": [
+          {
+            "platform": "Facebook",
+            "content": "🎉 Friday celebration: Week's achievements",
+            "time": "16:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-20",
+        "posts": []
+      },
+      {
+        "date": "2024-01-21",
+        "posts": []
+      },
+      {
+        "date": "2024-01-22",
+        "posts": [
+          {
+            "platform": "Instagram",
+            "content": "💪 Monday motivation: New week, new opportunities",
+            "time": "08:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-23",
+        "posts": [
+          {
+            "platform": "TikTok",
+            "content": "📈 Growth hack Tuesday: Scale your business",
+            "time": "13:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-24",
+        "posts": [
+          {
+            "platform": "Facebook",
+            "content": "🔥 Midweek momentum: Keep pushing forward",
+            "time": "10:30"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-25",
+        "posts": [
+          {
+            "platform": "Instagram",
+            "content": "⭐ Customer spotlight: Amazing transformations",
+            "time": "14:30"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-26",
+        "posts": [
+          {
+            "platform": "Google Ads",
+            "content": "Weekend special: Limited time offer available",
+            "time": "09:00"
+          }
+        ]
+      },
+      {
+        "date": "2024-01-27",
+        "posts": []
+      },
+      {
+        "date": "2024-01-28",
+        "posts": []
+      }
+    ],
+    "createdAt": "2024-01-15T12:00:00Z"
+  }
+}

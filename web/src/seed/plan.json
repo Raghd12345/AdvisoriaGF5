@@ -1,0 +1,31 @@
+{
+  "budgetAllocation": [
+    { "platform": "Facebook", "amount": 120, "percentage": 40 },
+    { "platform": "Instagram", "amount": 90, "percentage": 30 },
+    { "platform": "TikTok", "amount": 60, "percentage": 20 },
+    { "platform": "Google Ads", "amount": 30, "percentage": 10 }
+  ],
+  "schedule": [
+    {
+      "date": "2024-01-15",
+      "posts": [
+        { "platform": "Facebook", "content": "Fresh croissants every morning!", "time": "08:00" },
+        { "platform": "Instagram", "content": "Behind the scenes: Our baking process", "time": "10:00" }
+      ]
+    },
+    {
+      "date": "2024-01-16",
+      "posts": [
+        { "platform": "TikTok", "content": "Quick bread making tips", "time": "12:00" },
+        { "platform": "Facebook", "content": "Weekend special: 20% off cakes", "time": "15:00" }
+      ]
+    },
+    {
+      "date": "2024-01-17",
+      "posts": [
+        { "platform": "Instagram", "content": "Customer testimonial video", "time": "09:00" },
+        { "platform": "Google Ads", "content": "Best bakery in KL - Order now!", "time": "11:00" }
+      ]
+    }
+  ]
+}

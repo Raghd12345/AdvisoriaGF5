@@ -1,0 +1,58 @@
+[
+  {
+    "id": "idea-1",
+    "title": "Brand Story Campaign",
+    "description": "Share your business journey and values to build authentic connections with customers",
+    "platform": "Instagram",
+    "status": "pending"
+  },
+  {
+    "id": "idea-2", 
+    "title": "Customer Success Stories",
+    "description": "Feature testimonials and case studies from satisfied customers",
+    "platform": "Facebook",
+    "status": "pending"
+  },
+  {
+    "id": "idea-3",
+    "title": "Behind the Scenes Content",
+    "description": "Show your team, processes, and company culture to build trust",
+    "platform": "TikTok", 
+    "status": "pending"
+  },
+  {
+    "id": "idea-4",
+    "title": "Local Community Partnership",
+    "description": "Collaborate with other local businesses for cross-promotion opportunities",
+    "platform": "Facebook",
+    "status": "pending"
+  },
+  {
+    "id": "idea-5",
+    "title": "Educational Content Series",
+    "description": "Share industry tips and expertise to establish thought leadership",
+    "platform": "Instagram",
+    "status": "pending"
+  },
+  {
+    "id": "idea-6",
+    "title": "User-Generated Content",
+    "description": "Encourage customers to share their experiences with your brand",
+    "platform": "Facebook",
+    "status": "pending"
+  },
+  {
+    "id": "idea-7",
+    "title": "Seasonal Promotions",
+    "description": "Create timely offers and campaigns around holidays and events",
+    "platform": "Instagram",
+    "status": "pending"
+  },
+  {
+    "id": "idea-8",
+    "title": "Local SEO Campaign",
+    "description": "Target local customers searching for your services online",
+    "platform": "Google Ads",
+    "status": "pending"
+  }
+]

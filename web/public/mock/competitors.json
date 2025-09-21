@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "comp-1",
+      "businessId": "demo",
+      "name": "Premium Solutions Co",
+      "industry": "general",
+      "adContent": "Experience luxury service with our premium solutions. Industry-leading quality at competitive prices. Book your consultation today!",
+      "platform": "Facebook",
+      "location": "Local Area",
+      "estimatedBudget": 800,
+      "createdAt": "2024-01-15T09:00:00Z"
+    },
+    {
+      "id": "comp-2",
+      "name": "Elite Business Hub",
+      "industry": "general",
+      "adContent": "Transform your business with our cutting-edge strategies. Join the elite circle of successful entrepreneurs. Limited spots available!",
+      "platform": "Instagram",
+      "location": "Local Area",
+      "estimatedBudget": 1200,
+      "createdAt": "2024-01-15T09:15:00Z"
+    },
+    {
+      "id": "comp-3",
+      "name": "Quick Results Inc",
+      "industry": "general",
+      "adContent": "Fast, reliable, affordable solutions for modern businesses. See results in 30 days or your money back. Get started now!",
+      "platform": "Google Ads",
+      "location": "Local Area",
+      "estimatedBudget": 600,
+      "createdAt": "2024-01-15T09:30:00Z"
+    },
+    {
+      "id": "comp-4",
+      "name": "Innovation Labs",
+      "industry": "general",
+      "adContent": "Revolutionary approach to business growth. Our innovative methods have helped 1000+ companies scale. Free strategy session available!",
+      "platform": "TikTok",
+      "location": "Local Area",
+      "estimatedBudget": 400,
+      "createdAt": "2024-01-15T09:45:00Z"
+    }
+  ]
+}
